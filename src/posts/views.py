@@ -8,6 +8,6 @@ def post_list(request):
 
     return render(request, 'posts/post_list.html', {'posts': post})
 
-def post_detail(request, pk);
+def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return HttpResponse(post)
